@@ -1,0 +1,20 @@
+
+# Snapshot
+https://techpiezo.com/linux/use-and-implementation-of-backing-file-and-snapshot-in-qemu-kvm/
+
+
+# Grow root fs
+pkg: cloud-initramfs-growroot
+
+Guide: https://superuser.com/questions/1022019/how-to-increase-size-of-an-ubuntu-cloud-image
+
+Sch: https://www.google.com/search?q=resize+ubuntu+cloud+image
+
+
+
+# CentOS pkg
+https://centos.pkgs.org/8/centos-appstream-x86_64/cloud-utils-growpart-0.29-3.el8.noarch.rpm.html
+
+'''This package provides the growpart script for growing a partition. It is primarily used in cloud images in conjunction with the dracut-modules-growroot package to grow the root partition on first boot.
+'''
+

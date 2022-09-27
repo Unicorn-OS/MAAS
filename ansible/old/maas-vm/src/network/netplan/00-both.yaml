@@ -1,0 +1,14 @@
+# https://netplan.io/examples#using-dhcp-and-static-addressing
+network:
+  ethernets:
+    enp6s1:
+      dhcp: true
+    enp1s0:
+      addresses:
+        - 192.168.1.2/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses:
+        - 8.8.8.8
+        - 8.8.4.4
+    version: 2

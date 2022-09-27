@@ -1,0 +1,42 @@
+. var/all
+
+instance=cloud-init
+
+cloud-init/docker/add  # sets Docker build context
+
+build(){
+cd cloud-init/docker
+docker build -t $instance .
+cd ~-
+}
+
+clean(){
+docker rm -f $instance
+docker volume prune -f
+}
+
+generate(){
+docker run --name $instance -it $instance:latest bash
+}
+
+debug(){
+build
+# daemon
+docker run --name $instance -it -d $instance:latest bash
+# Attach
+docker exec -it $instance bash
+}
+
+get(){
+mkdir -p $out
+docker cp $instance:/app/maas.qcow2 $out
+}
+
+main(){
+build
+generate
+get
+clean
+}
+
+main

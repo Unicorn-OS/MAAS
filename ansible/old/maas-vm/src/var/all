@@ -1,0 +1,18 @@
+cd var
+
+. .my
+
+# test
+. ./test
+
+# var
+. cloud-init
+. network
+. maas
+. uni
+. instance # depends on: /uni
+
+# func
+. lib
+
+cd ~-

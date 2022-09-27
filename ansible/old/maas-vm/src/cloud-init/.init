@@ -1,0 +1,18 @@
+Pkg(){
+dnf install -y cloud-utils
+
+dnf install -y cloud-utils-growpart
+# https://centos.pkgs.org/8/centos-appstream-x86_64/cloud-utils-growpart-0.29-3.el8.noarch.rpm.html
+}
+
+Compile(){
+# Compile for Centos 8!
+https://centos.pkgs.org/7/epel-x86_64/cloud-utils-0.27-10.el7.x86_64.rpm.html
+}
+
+Docker(){
+# Else: use Docker
+echo 
+}
+
+

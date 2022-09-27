@@ -1,0 +1,17 @@
+. var/all
+
+init=cloud_init.cfg
+
+hardlink(){
+cd cloud-init
+
+rm -rf docker/template # Clean
+mkdir -p docker/template
+
+ln -f template/$netplan docker/template/network_config.cfg
+
+ln -f template/$init docker/template/cloud_init.cfg
+}
+
+
+hardlink

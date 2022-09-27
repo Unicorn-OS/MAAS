@@ -1,0 +1,15 @@
+# Resize
+
+# Take Snapshot and Resize together!
+https://fabianlee.org/2020/02/23/kvm-testing-cloud-init-locally-using-kvm-for-an-ubuntu-cloud-image/
+
+`# original image is 2G, create snapshot and make it 30G
+qemu-img create -b $origin.img -f qcow2 snapshot.qcow2 30G`
+
+
+
+# alt
+http://libguestfs.org/virt-resize.1.html
+
+Guide:
+https://fatmin.com/2016/12/20/how-to-resize-a-qcow2-image-and-filesystem-with-virt-resize/

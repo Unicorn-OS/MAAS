@@ -1,0 +1,10 @@
+info(){
+cd $stor
+sudo virt-df -h $name
+cd ~-
+}
+
+into(){
+cd $in
+}
+

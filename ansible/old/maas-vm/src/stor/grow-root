@@ -1,0 +1,7 @@
+. var/all
+
+# Only needed when additionally growing! Root resizes automatically on first cloud-init :-)
+
+grow_root(){
+sudo resize2fs /dev/vda1
+}

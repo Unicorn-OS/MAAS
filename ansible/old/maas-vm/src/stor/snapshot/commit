@@ -1,0 +1,1 @@
+qemu-img commit snapshot.qcow2

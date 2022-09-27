@@ -1,0 +1,18 @@
+echo 'virt install...........................'
+. var/all
+
+
+virtinstall(){
+sudo virt-install --name $name \
+  --virt-type kvm --memory 4096 --vcpus 2 \
+  --boot hd,menu=on \
+  --disk path=$seed,device=cdrom \
+  --disk path=$active,device=disk \
+  --graphics vnc \
+  --os-type Linux --os-variant ubuntu18.04 \
+  --network network:default \
+  --console pty,target_type=serial
+}
+
+
+virtinstall

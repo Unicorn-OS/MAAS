@@ -1,0 +1,5 @@
+https://fabianlee.org/2020/02/23/kvm-testing-cloud-init-locally-using-kvm-for-an-ubuntu-cloud-image/
+
+More advanced example
+
+For a more advanced example see my local-kvm-cloudimage/ubuntu-bionic repository.   This has full shell scripts and support for additional data disks formatted as xfs.

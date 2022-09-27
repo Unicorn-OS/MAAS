@@ -1,0 +1,30 @@
+. var/all
+
+
+resize(){
+echo 'Resize...........................'
+
+# Snapshot and Resize together!
+mkdir -p $snap
+
+qemu-img create -b $origin/$img -f qcow2 $active $size
+}
+
+inspect(){
+echo 'Inspect...........................'
+
+qemu-img info $active
+echo 
+virt-df -h $active
+}
+
+main(){
+FILE=$active
+if [ -f "$FILE" ]; then
+inspect
+else
+resize
+fi
+}
+
+main

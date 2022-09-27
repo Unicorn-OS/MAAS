@@ -1,0 +1,19 @@
+. var/all
+
+works(){
+. get
+. pass
+echo $hey
+}
+
+try(){
+. resize
+}
+
+alt(){
+. get
+}
+
+#works
+#try
+alt

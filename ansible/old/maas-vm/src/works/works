@@ -1,0 +1,6 @@
+. var/all
+
+echo $hey
+
+. stor/get
+. alter/pass

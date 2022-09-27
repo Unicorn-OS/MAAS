@@ -1,0 +1,5 @@
+active=$snap/maas-snapshot.qcow2
+
+size=30G
+
+name=Maas.0

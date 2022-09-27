@@ -1,0 +1,16 @@
+name=maas
+
+net=network_config.cfg
+to=/app
+
+clean(){
+rm -f $to/$name-seed.qcow2
+}
+
+createSeed(){
+cd $to
+cloud-localds -v --network-config=template/$net $to/$name.qcow2 template/cloud_init.cfg
+}
+
+clean
+createSeed

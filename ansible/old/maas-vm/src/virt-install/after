@@ -1,0 +1,30 @@
+size=30G
+img=ubuntu-18.04-server-cloudimg-amd64.img
+instance=test1
+
+snapshot(){
+qemu-img create -f qcow2 -b $img snapshot.qcow2 $size
+}
+
+destroy(){
+virsh destroy $instance
+}
+
+clean(){
+destroy
+}
+
+virtinstall(){
+virt-install --name $instance \
+  --virt-type kvm --memory 2048 --vcpus 2 \
+  --boot hd,menu=on \
+  --disk path=snapshot.qcow2,device=disk \
+  --graphics vnc \
+  --os-type Linux --os-variant ubuntu18.04 \
+  --network network:default \
+  --console pty,target_type=serial
+}
+
+clean
+snapshot
+virtinstall

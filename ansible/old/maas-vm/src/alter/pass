@@ -1,0 +1,11 @@
+# https://access.redhat.com/discussions/664843
+
+changeRoot(){
+sudo virt-customize -a $name --root-password password:root
+}
+
+
+# Main
+cd $stor
+changeRoot
+cd ~-

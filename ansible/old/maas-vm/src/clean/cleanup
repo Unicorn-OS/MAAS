@@ -1,0 +1,6 @@
+echo 'cleanup...........................'
+. var/all
+
+sudo virsh destroy $name
+
+sudo virsh undefine $name --storage vda

@@ -1,0 +1,23 @@
+echo 'Pull...........................'
+. var/all
+
+pull(){
+mkdir -p $bac ; cd $bac
+
+wget -q --show-progress -c https://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64-disk-kvm.img
+
+wget -q --show-progress -c https://cloud-images.ubuntu.com/releases/bionic/release/ubuntu-18.04-server-cloudimg-amd64.img
+}
+
+new(){
+mkdir -p $origin
+cp $bac/$base $origin/$img
+}
+
+
+main(){
+pull
+new
+}
+
+main

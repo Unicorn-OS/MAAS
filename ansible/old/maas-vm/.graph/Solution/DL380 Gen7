@@ -1,0 +1,3 @@
+Ubuntu 18.04 from MAAS 2.4.2 works fine!
+
+But sometimes Deploy gets stuck after server reboots. You may have to reboot Maas after DL380G7 is rebooted to detect a successfuld deployment!

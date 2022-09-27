@@ -1,0 +1,13 @@
+my_env(){
+ln -sr ../.my var/
+}
+
+required_Pkg(){
+sudo dnf install -y libguestfs-tools
+}
+
+main(){
+my_env
+required_Pkg
+}
+main

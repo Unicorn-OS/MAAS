@@ -1,0 +1,7 @@
+img=maas.img
+
+seed=/home/$USER/.uni/cloud-init/maas.qcow2
+
+# Choose latest or stable:
+base=ubuntu-20.04-server-cloudimg-amd64-disk-kvm.img
+base=ubuntu-18.04-server-cloudimg-amd64.img

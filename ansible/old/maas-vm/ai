@@ -1,0 +1,17 @@
+cd src
+#</pre>
+
+build(){
+cloud-init/build
+stor/pull
+stor/resize
+virt-install/run
+}
+
+start(){
+# start existing Maas!
+. var/instance
+virsh start $name
+}
+
+build

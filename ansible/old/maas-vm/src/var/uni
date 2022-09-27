@@ -1,0 +1,8 @@
+stor=/run/media/me/hyperion/ai
+
+bac=$stor/bac
+
+origin=$stor/origin
+
+snap=$stor/snap
+
