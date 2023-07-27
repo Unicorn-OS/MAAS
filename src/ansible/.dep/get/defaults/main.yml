@@ -1,0 +1,21 @@
+vagrant: false
+
+# Change this file to add dependency artifacts, repos, & roles!
+repo: [
+  { repo: "https://github.com/UnicornNetworks/Netplan-static.git", name: "Netplan-static"},
+  ]
+
+role: [
+  { git: "Netplan-static", name: "Netplan", path: "src/ansible/Netplan"},
+  ]
+
+library: [
+  # { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library"},
+  ]
+
+# set Inventory
+dynamic_inventory: "{{static_inventory}}"
+test_inventory: true
+
+# dependencies
+git_fetch_update: true
