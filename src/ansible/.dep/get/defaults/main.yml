@@ -6,7 +6,7 @@ repo: [
   ]
 
 role: [
-  { git: "Netplan-static", name: "Netplan", path: "src/ansible/Netplan"},
+  { git: "Netplan-static", name: "Netplan", path: "src/ansible/roles/Netplan"},
   ]
 
 library: [
