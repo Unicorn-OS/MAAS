@@ -3,4 +3,5 @@
   remote_user: vagrant
 
   roles:
+    - .dep/Netplan/static ip
     - test
