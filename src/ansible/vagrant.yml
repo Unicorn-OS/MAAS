@@ -1,0 +1,6 @@
+- name: Gnome VM
+  hosts: default
+  remote_user: vagrant
+
+  roles:
+    - test
