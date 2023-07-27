@@ -6,5 +6,5 @@
     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
 
   roles:
-  - netplan/static ip
+  - .dep/Netplan/static ip
   - MAAS
