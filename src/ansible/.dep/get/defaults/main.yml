@@ -3,10 +3,19 @@ vagrant: false
 # Change this file to add dependency artifacts, repos, & roles!
 repo: [
   { repo: "https://github.com/UnicornNetworks/Netplan-static.git", name: "Netplan-static"},
+  { repo: "https://github.com/Unicorn-OS/Packer.git", name: "Packer"},
+  { repo: "https://github.com/Unicorn-OS/Packer.Template.git", name: "Packer.Template"},
+  { repo: "https://github.com/Unicorn-OS/Vagrant.git", name: "Vagrant"},
   ]
 
 role: [
   { git: "Netplan-static", name: "Netplan", path: "src/ansible/roles/Netplan"},
+  { git: "Packer", name: "Packer", path: "src/ansible/roles/Packer"},
+  { git: "Packer.Template", name: "Bento", path: "src/ansible/roles/Bento"},
+  { git: "Packer.Template", name: "box", path: "src/ansible/roles/box"},
+  { git: "Packer.Template", name: "Bento", path: "src/ansible/roles/Bento"},
+  { git: "Vagrant", name: "Vagrant", path: "src/ansible/roles/Vagrant"},
+  { git: "Vagrant", name: "provider", path: "src/ansible/roles/provider"},
   ]
 
 library: [
