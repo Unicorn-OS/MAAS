@@ -1,10 +1,10 @@
+# https://maas.io/docs/how-to-do-a-fresh-install-of-maas#heading--init-maas-poc
+
 # If you want to set up PostgreSQL for a non-production deployment on
 # this machine, and configure it for use with MAAS, you can install
 # the maas-test-db snap before running 'maas init':
-
 #     sudo snap install maas-test-db
 #     sudo maas init region+rack --database-uri maas-test-db:///
-
 # the following arguments are required: run_mode
 
 
@@ -12,4 +12,6 @@
   community.general.snap:
     name: maas-test-db
   become: true
-  notify: init test deployment
+  notify:
+  - init test deployment
+  - maas createadmin

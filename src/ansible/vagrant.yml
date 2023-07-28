@@ -5,3 +5,4 @@
   roles:
     - .dep/Netplan/static ip
     - MAAS
+    - MAAS/.test deployment

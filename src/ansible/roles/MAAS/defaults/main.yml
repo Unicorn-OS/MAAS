@@ -1,0 +1,6 @@
+MAAS_DBUSER: me
+MAAS_DBPASS: "T%Pt#7Bp5QV"
+MAAS_DBNAME: maasdb
+HOSTNAME: localhost
+
+email: "admin@email.com"
