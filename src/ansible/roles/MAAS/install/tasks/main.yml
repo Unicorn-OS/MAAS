@@ -5,3 +5,11 @@
     name: maas
     channel: "{{channel}}"
   become: true
+
+
+- name: Disable and stop systemd-timesyncd
+  ansible.builtin.systemd:
+    name: systemd-timesyncd
+    state: stopped
+    enabled: false
+  become: true
