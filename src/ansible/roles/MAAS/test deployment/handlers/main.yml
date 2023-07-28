@@ -1,0 +1,6 @@
+- name: init test deployment
+  ansible.builtin.shell: maas init region+rack --database-uri maas-test-db:///
+  args:
+    # chdir: somedir/
+    creates: somelog.txt
+  become: true
